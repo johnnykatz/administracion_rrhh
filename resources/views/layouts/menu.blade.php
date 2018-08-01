@@ -50,11 +50,6 @@
                         class="fa fa-edit"></i><span>Estado Relacions</span></a>
         </li>
 
-        <li class="{{ Request::is('admin/estadoAgentes*') ? 'active' : '' }}">
-            <a href="{!! route('admin.estadoAgentes.index') !!}"><i
-                        class="fa fa-edit"></i><span>Estado Agentes</span></a>
-        </li>
-
         <li class="{{ Request::is('admin/situacionLaborals*') ? 'active' : '' }}">
             <a href="{!! route('admin.situacionLaborals.index') !!}"><i
                         class="fa fa-edit"></i><span>Situacion Laborals</span></a>
