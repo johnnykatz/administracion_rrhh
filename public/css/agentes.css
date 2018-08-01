@@ -1,0 +1,14 @@
+
+#agentes-table thead {
+    background: #3482B4;
+    color: #FFF;
+    vertical-align: middle;
+}
+
+#agentes-table p {
+    margin-bottom: 3px !important;
+}
+
+#agentes-table {
+    /*text-transform: uppercase*/
+}
