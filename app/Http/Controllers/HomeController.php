@@ -110,6 +110,8 @@ class HomeController extends Controller
                     if (!$agente) {
                         $datos[6] = str_replace(".", "", $datos[6]);
                         $datos[6] = str_replace(",", "", $datos[6]);
+                        $datos[4] = str_replace(".", "", $datos[4]);
+                        $datos[4] = str_replace(",", "", $datos[4]);
                         if (trim($datos[6]) == '32798157') {
                             $ff = 0;
                         }
