@@ -163,7 +163,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>Feha Instrum. Legal</th>
+                                <th>Fecha Instrum. Legal</th>
                                 <td>
                                     {!!($agente->puestoTrabajo->fecha_instrumento)?date("d-m-Y",strtotime($agente->puestoTrabajo->fecha_instrumento)):null !!}
                                 </td>
