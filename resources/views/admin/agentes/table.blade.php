@@ -65,10 +65,10 @@
                         <p><b>Numero Tarjeta:</b> {!! $agente->numero_tarjeta or null !!}</p>
                     </div>
                     <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-                        <p><b>Agrup:</b> {!! $agente->puestoTrabajo->agrupamiento->nombre or null !!}</p>
-                        <p><b>U.O.:</b> {!! $agente->puestoTrabajo->unidadOrganizacion->codigo or null !!}</p>
                         <p><b>Situaci&oacute;n
                                 Laboral:</b> {!! $agente->puestoTrabajo->situacionLaboral->nombre or null !!}</p>
+                        <p><b>Agrup:</b> {!! $agente->puestoTrabajo->agrupamiento->nombre or null !!}</p>
+                        <p><b>U.O.:</b> {!! $agente->puestoTrabajo->unidadOrganizacion->codigo or null !!}</p>
                         <p><b>Puesto:</b> {!! $agente->puestoTrabajo->tipoPuestoTrabajo->nombre or null !!}</p>
                         <p><b>Inst. Legal:</b>
                             @if(isset($agente->puestoTrabajo->tipoInstrumento->nombre_corto))
