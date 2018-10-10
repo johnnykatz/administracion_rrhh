@@ -2,6 +2,8 @@
     <thead>
         <tr>
             <th>Nombre</th>
+            <th>Nombre Corto</th>
+            <th>Slug</th>
             <th colspan="3">Action</th>
         </tr>
     </thead>
@@ -9,6 +11,8 @@
     @foreach($tipoEstructuras as $tipoEstructura)
         <tr>
             <td>{!! $tipoEstructura->nombre !!}</td>
+            <td>{!! $tipoEstructura->nombre_corto !!}</td>
+            <td>{!! $tipoEstructura->slug !!}</td>
             <td>
                 {!! Form::open(['route' => ['admin.tipoEstructuras.destroy', $tipoEstructura->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
