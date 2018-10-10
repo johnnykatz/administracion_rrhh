@@ -241,9 +241,9 @@ class AgenteController extends AppBaseController
             return redirect(route('admin.agentes.index'));
         }
 
-        $request['fecha_nacimiento'] = (isset($request['fecha_nacimiento'])) ? date("Y-m-d", strtotime($request['fecha_nacimiento'])) : null;
-        $request['fecha_instrumento'] = (isset($request['fecha_instrumento'])) ? date("Y-m-d", strtotime($request['fecha_instrumento'])) : null;
-        $request['fecha_ingreso'] = (isset($request['fecha_ingreso'])) ? date("Y-m-d", strtotime($request['fecha_ingreso'])) : null;
+        $request['fecha_nacimiento'] = ($request['fecha_nacimiento']) ? date("Y-m-d", strtotime($request['fecha_nacimiento'])) : null;
+        $request['fecha_instrumento'] = ($request['fecha_instrumento']) ? date("Y-m-d", strtotime($request['fecha_instrumento'])) : null;
+        $request['fecha_ingreso'] = ($request['fecha_ingreso']) ? date("Y-m-d", strtotime($request['fecha_ingreso'])) : null;
         $agente = $this->agenteRepository->update($request->all(), $id);
         LogTablesProvider::setLogTable('update', $agente, $agenteOld);
 

@@ -35,7 +35,7 @@
         <!-- Fecha Nacimiento Field -->
         <div class="form-group col-sm-6">
             {!! Form::label('fecha_nacimiento', 'Fecha Nacimiento:') !!}
-            {!! Form::text('fecha_nacimiento', (isset($agente))?date("d-m-Y",strtotime($agente->fecha_nacimiento)):null, ['class' => 'form-control datepicker']) !!}
+            {!! Form::text('fecha_nacimiento', (isset($agente->fecha_nacimiento))?date("d-m-Y",strtotime($agente->fecha_nacimiento)):null, ['class' => 'form-control datepicker']) !!}
         </div>
 
         <!-- Titulo Field -->
@@ -91,7 +91,7 @@
                 <!-- Fecha Ingreso Field -->
                 <div class="form-group col-sm-6">
                     {!! Form::label('fecha_ingreso', 'Fecha Ingreso:') !!}
-                    {!! Form::text('fecha_ingreso', (isset($agente))?date("d-m-Y",strtotime($agente->fecha_ingreso)):null, ['class' => 'form-control datepicker']) !!}
+                    {!! Form::text('fecha_ingreso', (isset($agente->fecha_ingreso))?date("d-m-Y",strtotime($agente->fecha_ingreso)):null, ['class' => 'form-control datepicker']) !!}
                 </div>
 
                 <!-- Numero Tarjeta Field -->

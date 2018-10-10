@@ -45,8 +45,14 @@
 
                 </td>
                 <td class="col-lg-8 col-sm-8 col-md-8 col-xs-8">
-                    <pre class="{{($agente->activo)?'text-success':'text-danger'}}"
-                         style="text-transform: uppercase"><b>Lugar de Trabajo: {!! $agente->puestoTrabajo->Estructura->nombre!!}</b></pre>
+                    @if($agente->tramite_jubilacion)
+                        <pre class="{{($agente->activo)?'text-success':'text-danger'}}"
+                             style="text-transform: uppercase">Lugar de Trabajo:<b> {!! $agente->puestoTrabajo->Estructura->nombre or null!!}<span
+                                        class="pull-right">Jub. E/T</span></b></pre>
+                    @else
+                        <pre class="{{($agente->activo)?'text-success':'text-danger'}}"
+                             style="text-transform: uppercase">Lugar de Trabajo: <b>{!! $agente->puestoTrabajo->Estructura->nombre!!}</b></pre>
+                    @endif
                     <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
                         <p><b>Tipo Agente:</b> {!! $agente->tipoAgente->nombre or null !!}</p>
                         <p><b>Legajo:</b> {!! $agente->legajo !!}</p>
@@ -80,7 +86,8 @@
                 <td>
                     {!! Form::open(['route' => ['admin.agentes.destroy', $agente->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
-                        <a href="{!! route('admin.agentes.show', [$agente->id]) !!}" title="Ver informacion" class='btn btn-default'><i
+                        <a href="{!! route('admin.agentes.show', [$agente->id]) !!}" title="Ver informacion"
+                           class='btn btn-default'><i
                                     class="glyphicon glyphicon-eye-open"></i></a>
                         @permission("abm_agentes")
                         <a href="{!! route('admin.agentes.edit', [$agente->id]) !!}" title="Editar"
