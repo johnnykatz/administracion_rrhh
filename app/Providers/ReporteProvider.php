@@ -83,7 +83,7 @@ class ReporteProvider
             ->where('a.activo', true)
             ->where('p.activo', true)
             ->where('a.tipo_agente_id', 1)
-            ->select('a.id')->groupBy('a.id')->count();
+            ->select('a.id')->distinct('a.id')->count();
     }
 
     public function getAgentesLicSGoceH()
@@ -93,7 +93,7 @@ class ReporteProvider
             ->where('a.activo', true)
             ->where('p.activo', true)
             ->where('a.tipo_agente_id', 1)
-            ->select('a.id')->groupBy('a.id')->count();
+            ->select('a.id')->distinct('a.id')->count();
     }
 
 
